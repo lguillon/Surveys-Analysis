@@ -15,3 +15,9 @@ and should provide valuable insights and recommendations based on the data colle
 Please ensure that the report is well-structured, clearly presented, and includes relevant graphs and charts to support your findings.
 
 """
+
+# set your openai key here
+os.environ["OPENAI_API_KEY"] = "sk-Wcxxxxxxx"
+agent = create_csv_agent(OpenAI(temperature=0), 'data.csv', verbose=True, pandas_kwargs={'encoding': 'latin-1', 'sep': ';'}, allow_dangerous_code=True) # Added allow_dangerous_code=True
+# Start our "interrogation"
+agent.run("How many rows and columns are there in the dataframe?")
