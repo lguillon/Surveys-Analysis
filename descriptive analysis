@@ -7,3 +7,11 @@ df = pd.read_csv('data.csv', encoding='latin-1', error_bad_lines=False, sep=',')
 
 # Display the first few rows of the DataFrame to check if it's loaded correctly
 print(df.head())
+
+survey_analysis_prompt = """
+Please create a comprehensive and detailed report based on a survey that you have conducted
+The report should include a thorough analysis of the survey results 
+and should provide valuable insights and recommendations based on the data collected. 
+Please ensure that the report is well-structured, clearly presented, and includes relevant graphs and charts to support your findings.
+
+"""
