@@ -1,4 +1,9 @@
+
+!pip install langchain_experimental
+import os
 import pandas as pd
+from langchain_experimental.agents import create_csv_agent # Import from the correct module
+from langchain.llms import OpenAI
 
 # Read the CSV file, handling errors and specifying delimiter
 df = pd.read_csv('data.csv', encoding='latin-1', error_bad_lines=False, sep=',')  
