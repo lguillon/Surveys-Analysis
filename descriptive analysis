@@ -1,0 +1,9 @@
+import pandas as pd
+
+# Read the CSV file, handling errors and specifying delimiter
+df = pd.read_csv('data.csv', encoding='latin-1', error_bad_lines=False, sep=',')  
+# or sep=';' or sep='\t' if comma is not the delimiter
+# error_bad_lines=False skips problematic lines
+
+# Display the first few rows of the DataFrame to check if it's loaded correctly
+print(df.head())
